@@ -33,20 +33,40 @@ Predicting New Sentences:
 Use the trained models to classify emotions in new text samples.
 
 ## How to Use
-1. Loading and Preprocessing:
 
-The notebook includes code to load and preprocess the dataset.
-Follow the markdown explanations in the notebook for details on preprocessing techniques.
-2. Feature Extraction:
+### 1. Loading and Preprocessing
 
-The notebook demonstrates how to use TfidfVectorizer for feature extraction.
-3. Model Development:
+- **Loading Data**: The notebook starts by loading the dataset from the provided source. Ensure that you have the dataset file placed correctly before running the code.
 
-The notebook contains sections for training Naive Bayes and SVM models.
-Evaluation metrics are calculated and compared.
-4. Predicting New Sentences:
+- **Preprocessing Steps**:
+  - **Text Cleaning**: Remove any unwanted characters and normalize text.
+  - **Tokenization**: Break text into individual words or tokens.
+  - **Stopword Removal**: Remove common words that do not contribute to the meaning of the text.
+
+  These preprocessing steps are crucial as they help in transforming raw text into a clean format suitable for feature extraction and model training. Follow the markdown explanations in the notebook to understand the specific techniques and their impact on model performance.
+
+### 2. Feature Extraction
+
+- **TfidfVectorizer**: The notebook demonstrates how to use the `TfidfVectorizer` from the `scikit-learn` library to convert text data into numerical features.
+  - **TF-IDF (Term Frequency-Inverse Document Frequency)**: This method transforms text into a matrix of features where each term is weighted based on its importance in the document relative to the corpus.
+
+  The feature extraction step is essential for converting text data into a format that machine learning models can work with. Refer to the notebook for detailed code and explanations on how this transformation is performed.
+
+### 3. Model Development
+
+- **Naive Bayes and SVM Models**:
+  - **Naive Bayes**: A probabilistic model that works well with text classification by assuming feature independence. The notebook includes code for training and evaluating this model.
+  - **Support Vector Machine (SVM)**: A robust classifier that finds the optimal hyperplane to separate different classes. The notebook demonstrates how to train and evaluate an SVM model.
+
+- **Model Evaluation**:
+  - **Metrics**: Accuracy, F1-score, and other relevant metrics are calculated to evaluate model performance.
+  - **Comparison**: Results from both models are compared to determine the best performing model for the emotion classification task.
+ 
+### 4. Predicting New Sentences:
 
 Use the provided function to predict the emotion of new text samples.
+
+  This section of the notebook provides a comprehensive guide to training and evaluating the machine learning models. Follow the markdown explanations for insights into the model evaluation process and interpretation of results.
 
 ## Results
 The results section of the notebook will provide:
